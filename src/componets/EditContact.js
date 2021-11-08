@@ -14,7 +14,7 @@ let {id} = useParams()
 let history = useHistory();
 
 const dispacth = useDispatch()
-const contact = useSelector((state) => state.contacts)
+const contact = useSelector((state) => state.contacts.contacts)
 
 
     const [contactValues, setcontactValues] = useState({
@@ -36,9 +36,9 @@ const onUpdateContact = (e) =>{
     e.preventDefault();
     const update_contact = {
         id:+id,
-        name: contactValues.name,
-        phonenumber: contactValues.phonenumber,
-        email: contactValues.email
+        name: name,
+        phonenumber: phonenumber,
+        email: email
     }
 
     dispacth(updateContact(update_contact))

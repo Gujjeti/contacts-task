@@ -2,7 +2,7 @@ import './App.css';
 import Contacts from './componets/Contacts';
 import Header from './componets/Header';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link

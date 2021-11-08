@@ -1,25 +1,25 @@
-import {ADD_CONTACT, GET_ALL_CONTACTS, EDIT_CONTACT, UPDATA_CONTACT, DELETE_CONTACT} from '../actions/types'
+import {ADD_CONTACT, GET_ALL_CONTACTS, EDIT_CONTACT, UPDATA_CONTACT, DELETE_CONTACT, SEACTH_FILTER} from '../actions/types'
 
 
 const intialcontacts = {
     contacts: [
         {
         id:1,
-        name:"Ganesh Gujjeti",
-        phonenumber: "7506250294",
-        email:"gujjeti97@gmail.com"
+        name:"Leanne Graham",
+        phonenumber: "1234567890",
+        email:"Sincere@april.biz"
     },
       {
           id:2,
-        name:"Basheer Mohammad",
+        name:"Ervin Howell",
         phonenumber: "1234567890",
-        email:"Basheer@gmail.com"
+        email:"Shanna@melissa.tv"
     },
       {
           id:3,
-        name:"Srikant Beerkula",
-        phonenumber: "0987654321",
-        email:"Srikant@gmail.com"
+        name:"Clementine Bauch",
+        phonenumber: "1234567890",
+        email:"Nathan@yesenia.net"
     }
     ],
     Editcontact:{},
@@ -29,7 +29,7 @@ export const contactsReducers = (state = intialcontacts,action) =>{
 
     switch(action.type){
         case GET_ALL_CONTACTS:
-        return {...state};
+        return {state};
 
         case ADD_CONTACT:
         return{
@@ -59,6 +59,12 @@ export const contactsReducers = (state = intialcontacts,action) =>{
                        return action.payload !== index
                    })
                 }
+
+                case SEACTH_FILTER:
+                    return{
+                        ...state,
+                       
+                    }
         
 
         default: 

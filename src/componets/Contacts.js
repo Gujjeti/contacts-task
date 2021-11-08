@@ -6,13 +6,15 @@ import { useDispatch } from 'react-redux'
 
 const Contacts = () => {
 
-    const contactslist = useSelector( state => state.contacts)
+    const contactslist = useSelector( state => state.contacts.contacts)
 
 const dispacth = useDispatch()
 
 const removeContact =  (id) =>{
 dispacth(deleteContact(id))
 }
+
+
 
     return (
         <div className="container mt-4">
